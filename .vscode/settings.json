@@ -1,0 +1,23 @@
+{
+    "rust-analyzer.showUnlinkedFileNotification": false,
+    "cSpell.words": [
+        "dentry",
+        "EBADF",
+        "EINVAL",
+        "EISDIR",
+        "ENOENT",
+        "ENOSYS",
+        "ENOTDIR",
+        "EPERM",
+        "errno",
+        "getattr",
+        "libc",
+        "onepassword",
+        "opendir",
+        "readdir",
+        "readlink",
+        "releasedir",
+        "sharedcell",
+        "syscalls"
+    ]
+}
