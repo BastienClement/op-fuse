@@ -27,6 +27,10 @@ use tracing_subscriber::prelude::*;
 struct Cli {
     /// The configuration file to read
     config: String,
+
+    /// Whether to allow other users to access the filesystem
+    #[clap(long)]
+    allow_others: bool,
 }
 
 fn main() -> Result<()> {
@@ -47,7 +51,11 @@ fn main() -> Result<()> {
         &config.mountpoint,
         &[
             MountOption::AutoUnmount,
-            MountOption::AllowRoot,
+            if cli.allow_others {
+                MountOption::AllowOther
+            } else {
+                MountOption::AllowRoot
+            },
             MountOption::DefaultPermissions,
         ],
     )?;

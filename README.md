@@ -10,7 +10,7 @@ app.
 ## Usage
 
 ```sh
-op-fuse /path/to/config.toml
+op-fuse [--allow-others] /path/to/config.toml
 ```
 
 ## Security
